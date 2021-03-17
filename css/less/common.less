@@ -1,0 +1,107 @@
+/* ----------------------------------- *\
+		common styles
+\* ----------------------------------- */
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeinslide {
+    from {opacity: 0;transform: translate(0, -50px);}
+    to {opacity: 1;transform: translate(0, 0px);}
+}
+.i {
+	display: inline-block;
+	vertical-align: middle;
+	transition: none;
+}
+.js-bg-box {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	.js-bg-photo {
+		display: block;
+		position: absolute;
+		top: 0;left: 0;
+		width: 100%;height: 100%;
+		object-fit: cover;
+	}
+}
+.js-btn-toggle.active+.js-popup-block {display: block !important;}
+.js-popup-block {-webkit-animation: fadein ease 0.3s;animation: fadein ease 0.3s;}
+.js-tab-block {
+	display: none;
+	animation: fadein ease 0.2s;
+	&.active {
+		display: block;
+	}
+}
+.items-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    min-width: 100%;
+    margin: 0 -15px;
+}
+.item-wrap {
+    width: 100%;
+    position: relative;
+    break-inside: avoid-column;
+    display: block;
+    animation: fadein ease 0.2s;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    &.wrap-more {
+        &~.item-wrap {
+            display: none;
+        }
+        &.active {
+            display: none;
+            &~.item-wrap {
+                display: block;
+            }
+        }
+    }
+}
+.slider-wrap {
+    margin: 0 -15px;
+    position: relative;
+    line-height: 1;
+}
+.sl-wrap {
+    padding: 0 15px;
+    position: relative;
+    line-height: 1;
+}
+.sl-wrap~.sl-wrap {
+    display: none;
+}
+.no-mbottom {
+    margin-bottom: 0 !important;
+}
+.no-mtop {
+    margin-top: 0 !important;
+}
+@media (max-width: 1023px) {
+    .elm-hidden-mobile {
+        display: none;
+    }
+    .items-wrap {
+        margin: 0 -10px;
+    }
+    .item-wrap {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+    .sl-wrap {
+        padding: 0 10px;
+    }
+    .slider-wrap {
+        margin: 0 -10px;
+    }
+}
+@media (min-width: 1024px) {
+	.elm-hidden-desktop {
+		display: none;
+	}
+}
