@@ -18,7 +18,7 @@
 body {
   color: var(--clr-base, #000);
   background: #fff;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.28571429;
 }
@@ -490,12 +490,12 @@ body {
     color: #fff;
     font-size: 13px;
     line-height: 19px;
-    font-weight: 300;
+    font-weight: 400;
     padding: 24px 0;
   }
   .header-menu-wrap ul ul {
     display: none;
-    font-weight: 300;
+    font-weight: 400;
     background: #163D72;
     padding-bottom: 24px;
     margin-top: -10px;
@@ -896,7 +896,7 @@ body {
     color: var(--clr-att);
   }
   .header-top-panel .elm-phone {
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
@@ -1819,7 +1819,7 @@ body {
   background: rgba(247, 247, 247, 0.84);
   font-size: 14px;
   line-height: 2;
-  font-weight: 300;
+  font-weight: 400;
 }
 .main-partners-box .slider-outer-wrap,
 .main-partners-box .slider-wrap,
@@ -2270,7 +2270,7 @@ body {
   .card-info-box .more-wrap {
     padding-top: 0;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
   }
   .card-info-box p {
     margin-bottom: 1.7em;
