@@ -1,6 +1,6 @@
 :root {
 	--clr-base: #000;
-	--clr-att: #f00;
+	--clr-att: #3C7DD2;
 
 	--min: 320px;
 	--max: 1200px;
@@ -19,9 +19,13 @@
 body {
 	color: var(--clr-base, #000);
 	background: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18/14;
 }
 p, ul, ol {
 	position: relative;
+    margin-bottom: 1em;
 	img {
 		max-width: 100%;
 	}
@@ -35,10 +39,10 @@ li {
 }
 a {
 	text-decoration: none;
-	color: var(--clr-att, #f00);
+	color: var(--clr-att, #3C7DD2);
 	&:hover {
 		text-decoration: none;
-		color: var(--clr-att, #f00);
+		color: var(--clr-att, #3C7DD2);
 	}
 }
 a.link-main, .link-main {
@@ -54,5 +58,48 @@ h3, .h3-title,
 h4, .h4-title,
 h5, .h5-title,
 h6, .h6-title {
-
+	display: block;
+	position: relative;
+    font-size: 21px;
+    line-height: 1.2;
+    margin: 1em 0 1em 0;
+    font-weight: 500;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+h2, .h2-title {
+    font-size: 21px;
+}
+h3, .h3-title {
+    font-size: 16px;
+    line-height: 24/16;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+ol {
+    counter-reset: li; 
+    list-style: none;
+    li {
+    	position: relative;
+        padding-left: 20px;
+        margin: 0;
+    	&:before {
+    		content: counter(li) '.'; 
+			counter-increment: li;
+            position: absolute;
+            top: 0;
+            left: 0;
+    	}
+    }
+}
+@media (min-width: 768px) {
+    .h2-title, h2 {
+        font-size: 24px;
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        background: #FCFCFC;
+    }
 }
