@@ -144,15 +144,25 @@
 
         <!-- page -->
         <div class="page">
-            <ul style="padding: 100px 0;font-size: 20px;line-height: 2;">
+            <ul style="padding: 100px 0;font-size: 20px;line-height: 1.2;">
                 <!--<li><a href="main.html">Main</a></li>-->
                 <li><a href="categories.html">Categories</a></li>
                 <li><a href="card.html">Card</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="new.html">New</a></li>
                 <!--<li><a href="diller01.html">Diller 01</a></li>-->
                 <!--<li><a href="diller02.html">Diller 02</a></li>-->
                 <!--<li><a href="diller03.html">Diller 03</a></li>-->
                 <!--<li><a href="diller04.html">Diller 04</a></li>-->
                 <!--<li><a href="diller05.html">Diller 05</a></li>-->
+                <!--<li style="margin-top: 10px;margin-bottom: 10px;">
+						<a href="" class="js-open-all">Открыть все страницы (кроме попапов) в новых окнах</a>
+						<div style="font-size: 12px;line-height: 14px;">Необходимо разрешить всплывающие окна</div>
+					</li>-->
+                <li>----------</li>
+                <li><a href="" data-src="#popup-contact" data-fancybox class="js-btn-popup-contact">Popup contact</a></li>
+                <li><a href="" data-src="#popup-write" data-fancybox class="js-btn-popup-write">Popup write</a></li>
+                <li><a href="" data-src="#popup-order" data-fancybox class="js-btn-popup-order">Popup order</a></li>
             </ul>
         </div>
         <!-- /page -->
@@ -208,6 +218,58 @@
         </footer>
         <!-- /footer -->
 
+        <div id="popup-contact" class="popup-box" style="display: none;">
+            <form action="/" class="frm-popup">
+                <div class="frm-title">Связаться с дилером</div>
+                <div class="frm-row">
+                    <input type="text" placeholder="Введите имя" class="form-input">
+                </div>
+                <div class="frm-row">
+                    <input type="tel" placeholder="Введите телефон" class="form-input">
+                </div>
+                <div class="frm-row">
+                    <input type="text" placeholder="Вид продукции" class="form-input">
+                </div>
+                <div class="frm-row">
+                    <input type="text" placeholder="Укажите город" class="form-input">
+                </div>
+                <div class="frm-row">
+                    <textarea placeholder="Введите сообщение" class="form-input"></textarea>
+                </div>
+                <div class="frm-row-submit">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+        <div id="popup-write" class="popup-box" style="display: none;">
+            <form action="/" class="frm-popup">
+                <div class="frm-title">Напишите нам</div>
+                <div class="frm-row">
+                    <input type="text" placeholder="Введите имя" class="form-input">
+                </div>
+                <div class="frm-row">
+                    <input type="tel" placeholder="Введите телефон" class="form-input">
+                </div>
+                <div class="frm-row">
+                    <textarea placeholder="Введите сообщение" class="form-input"></textarea>
+                </div>
+            </form>
+        </div>
+        <div id="popup-order" class="popup-box" style="display: none;">
+            <form action="/" class="frm-popup">
+                <div class="frm-title">Заказать товар</div>
+                <div class="frm-row">
+                    <input type="text" placeholder="Введите имя" class="form-input">
+                </div>
+                <div class="frm-row">
+                    <input type="tel" placeholder="Введите телефон" class="form-input">
+                </div>
+                <div class="frm-row-submit">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+
     </div>
     <!-- /wrap -->
 
@@ -216,6 +278,16 @@
     <script src="./js/slick.min.js"></script>
     <script src="./js/jquery.maskedinput.min.js"></script>
     <script src="./js/scripts.js"></script>
+    <script>
+        $(window).on('load', function() {
+            $('.js-open-all').on('click', function() {
+                $(this).parents('ul').find('[href$=".html"]').each(function() {
+                    window.open(this.href);
+                })
+                return false;
+            })
+        });
+    </script>
 
 </body>
 
