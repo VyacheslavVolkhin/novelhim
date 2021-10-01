@@ -8,6 +8,10 @@
     font-size: 14px;
     color: #000;
     background: #fff;
+    transition: border-color ease 0.2s;
+    &:focus {
+        border-color: var(--clr-att);
+    }
 }
 textarea.form-input {
     line-height: 1.2;
@@ -288,7 +292,6 @@ input[type="submit"] {
     }
     .form-input {
         height: 69px;
-        border: none;
         background-color: #fff;
         box-shadow: none;
         border-radius: 0;
@@ -298,6 +301,10 @@ input[type="submit"] {
         line-height: 24px;
         font-weight: 500;
         color: #000;
+        border-color: #fff;
+        &:focus {
+            border-color: var(--clr-att);
+        }
     }
     select.form-input {
         padding-right: 50px;

@@ -2858,6 +2858,11 @@ body {
   font-size: 14px;
   color: #000;
   background: #fff;
+  -webkit-transition: border-color ease 0.2s;
+  transition: border-color ease 0.2s;
+}
+.form-input:focus {
+  border-color: var(--clr-att);
 }
 textarea.form-input {
   line-height: 1.2;
@@ -3179,7 +3184,6 @@ input[type="submit"].button-border:hover {
 }
 .frm-popup .form-input {
   height: 69px;
-  border: none;
   background-color: #fff;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -3190,6 +3194,10 @@ input[type="submit"].button-border:hover {
   line-height: 24px;
   font-weight: 500;
   color: #000;
+  border-color: #fff;
+}
+.frm-popup .form-input:focus {
+  border-color: var(--clr-att);
 }
 .frm-popup select.form-input {
   padding-right: 50px;
